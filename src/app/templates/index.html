@@ -1,0 +1,46 @@
+{%extends 'base.html' %}
+
+{% block title %}
+    Testing Title 
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid text-center">    
+    <div class="row">
+        <div class="col-sm-12"> 
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8" style="padding-top: 10px;">
+                <button class="submite">Generate Story</button>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8" style="top: 10px;"> 
+            <div class="content">
+                <div class="interactive">                
+                    <p class="info" contenteditable="true" spellcheck="true">
+                        
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-2"></div>
+
+    </div>
+
+    <div class="col-sm-12 footer"> 
+        <a href="https://www.linkedin.com/in/marketne/" style="text-decoration:none;"> 
+            <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQGyOWvr4W0Pow/company-logo_200_200/0/1590003577120?e=1627516800&v=beta&t=1lLIFNWyYOTb19XlEytH83JOXrkRUA-vxXkg8NWGtzM" alt="Linkedin" class="avatar">
+        </a>
+
+        <a href="https://github.com/tibrado/modeling-a-novel" style="text-decoration:none; vertical-align: bottom;"> 
+            <img src="https://media-exp1.licdn.com/dms/image/C560BAQGO4Mxhy8KAgQ/company-logo_200_200/0/1564764741123?e=1626912000&v=beta&t=vBe3y9FMTnCTOjMRpnmalSfe4Roy3tAatsIYW-y6e48" alt="Github" class="avatar">
+        </a>
+
+    </div>
+</div>
+{% endblock %}

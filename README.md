@@ -2,7 +2,6 @@
 
 ---
 
-
 ## References
 
 [OpenAI GPT-2](https://github.com/openai/gpt-2)  
