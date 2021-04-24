@@ -1,8 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import pipline as pipline 
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    #mode = ['new', 'generated']
+    if request.method == 'POST':
+        text = request.form.get('text')
+        print(text)
+
+    return render_template('index.html', mode = 'new', story = pipline.make_story())
     

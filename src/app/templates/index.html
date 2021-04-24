@@ -7,25 +7,21 @@
 {% block content %}
 <div class="container-fluid text-center">    
     <div class="row">
-        <div class="col-sm-12"> 
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8" style="padding-top: 10px;">
-                <button class="submite">Generate Story</button>
-            </div>
-            <div class="col-sm-2"></div>
-        </div>
-
         <div class="col-sm-2"></div>
 
-        <div class="col-sm-8" style="top: 10px;"> 
-            <div class="content">
-                <div class="interactive">                
-                    <p class="info" contenteditable="true" spellcheck="true">
-                        
-                    </p>
+        <div class="col-sm-8"> 
+            <form method="POST">
+
+                <div style="padding-top: 10px;">
+                    <button type="submit" class="submited">Generate Story</button>
+                </div>
+                <!--input type="text" name="todo" id="todo"-->
+                <br>
+                <div class = "content" style="top: 10px;">
+                    <textarea name="text" type="text" class="text"> </textarea> 
                 </div>
 
-            </div>
+            </form>
         </div>
 
         <div class="col-sm-2"></div>
