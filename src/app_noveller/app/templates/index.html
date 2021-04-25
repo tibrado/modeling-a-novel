@@ -10,7 +10,7 @@
         <div class="col-sm-2"></div>
 
         <div class="col-sm-8"> 
-            <form method="POST">
+            <form method="POST" id="story-form">
 
                 <div style="padding-top: 10px;">
                     <button type="submit" class="submited">Generate Story</button>
@@ -18,7 +18,17 @@
                 <!--input type="text" name="todo" id="todo"-->
                 <br>
                 <div class = "content" style="top: 10px;">
-                    <textarea name="text" type="text" class="text"> </textarea> 
+                    <textarea name="text" type="text" class="text" autocapitalize="true" spellcheck="true" placeholder="
+                                Hi, Welcome to the Noveller
+
+                        Instructions:     [Random Mode OR Story Mode]
+                            1. Story Mode
+                                -   Insert text.
+                                -   Click Story Generator Button.
+                            2. Random Mode
+                                -   Click Story Generator Button.  
+                     "
+                     ></textarea> 
                 </div>
 
             </form>
@@ -39,4 +49,24 @@
 
     </div>
 </div>
+
+<!--Jquery Cdn -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).on('submit','#story-form',function(e){
+        console.log('hello');
+        e.preventDefault();
+        $.ajax({
+            type:'POST',
+            url:'/',
+            data:{
+                text:$(".text").val()
+            },
+            success:function(){
+                $(".text").val('Computing...');
+            }
+        })
+    });
+</script>
 {% endblock %}
