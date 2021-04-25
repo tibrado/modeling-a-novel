@@ -5,3 +5,8 @@ requests==2.21.0
 tqdm==4.31.1
 toposort==1.5
 tensorflow==1.14
+numpy==1.16.4
+json==2.0.9
+regex==2.5.82
+os
+functools
