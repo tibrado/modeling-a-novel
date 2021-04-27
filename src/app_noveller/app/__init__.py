@@ -3,12 +3,19 @@ import pipline as pipline
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['POST', 'GET'])
 def index():
-    #mode = ['new', 'generated']
     if request.method == 'POST':
         text = request.form.get('text')
-        print(text)
+        # random = int(request.form.get('randomness'))
 
-    return render_template('index.html', mode = 'new', story = pipline.make_story())
-    
+        if text == '':
+            text = 'Fire Ball!!'
+
+        return render_template('index.html', mode = 'new', story = pipline.make_story(
+            input_text = text, 
+            randomness = 1,
+            text_diversity = 40))
+
+    return render_template('index.html', mode = 'new', story = '')
+

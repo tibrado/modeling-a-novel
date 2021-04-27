@@ -11,13 +11,23 @@
 
         <div class="col-sm-8"> 
             <form method="POST" id="story-form">
-
                 <div style="padding-top: 10px;">
                     <button type="submit" class="submited">Generate Story</button>
                 </div>
+
+                <!--
+                <div>
+                    <p style="display: inline;">Randomness 
+                        <input name="randomness" type="range" value="10" min="1" max="10" oninput="this.nextElementSibling.value = this.value" class="slider" style="width: 50%; display: inline;">
+                        <output style="display: inline;">10</output>
+                    </p>
+                </div>
+                -->
+
                 <!--input type="text" name="todo" id="todo"-->
                 <br>
                 <div class = "content" style="top: 10px;">
+
                     <textarea name="text" type="text" class="text" autocapitalize="true" spellcheck="true" placeholder="
                                 Hi, Welcome to the Noveller
 
@@ -28,7 +38,7 @@
                             2. Random Mode
                                 -   Click Story Generator Button.  
                      "
-                     ></textarea> 
+                     >{{story}}</textarea> 
                 </div>
 
             </form>
@@ -50,7 +60,8 @@
     </div>
 </div>
 
-<!--Jquery Cdn -->
+
+<!--Jquery Cdn
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
@@ -64,9 +75,10 @@
                 text:$(".text").val()
             },
             success:function(){
-                $(".text").val('Computing...');
+                $(".text").val('{{story}}');
             }
         })
     });
 </script>
+-->
 {% endblock %}
