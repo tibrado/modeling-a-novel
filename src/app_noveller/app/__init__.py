@@ -11,11 +11,12 @@ def index():
 
         if text == '':
             text = 'Fire Ball!!'
-
+        '''
         return render_template('index.html', mode = 'new', story = pipline.make_story(
             input_text = text, 
             randomness = 1,
             text_diversity = 40))
+        '''
 
-    return render_template('index.html', mode = 'new', story = '')
+    return render_template('index.html', mode = 'new', story = 'Testing')
 
