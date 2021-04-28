@@ -13,7 +13,6 @@ Welcome to the project named the Noveller, aka "Modeling a Novel." This project 
 The GPT architecture implements a deep neural network, specifically a transformer model, which uses attention in place of the previous recurrence-based and convolution-based architectures. Attention mechanisms allow the model to selectively focus on segments of input text it predicts to be the most relevant. This model provides for significantly increased parallelization and outperforms previous benchmarks for RNN/CNN/LSTM-based models.  
 
 <br>
-<br>
 
 <details>  
 
@@ -33,17 +32,19 @@ The GPT architecture implements a deep neural network, specifically a transforme
 </details>
 
 <br>
-Sadly the model is too big/expensive for a hobbyist to host. If you would like to host it locally, follow these steps:
+Sadly the model is too big/expensive for a hobbyist to host. If you would like to host it locally, follow these steps:  
 
 <br>
 
-Step 1: [Download File](https://drive.google.com/file/d/1yWJCV3shUcSCwksQw5ajzB60CULlnJ4V/view?usp=sharing)
+> Step 1: [Download File](https://drive.google.com/file/d/1yWJCV3shUcSCwksQw5ajzB60CULlnJ4V/view?usp=sharing)
 ```bash
 tar -tvf noveller.tar.xz .  # Step 2: Extract  
 pip install docker-compose  # Step 3: Install Docker Composer
 cd noveller                 # Step 4: Go to noveller dir
 sudo docker-compose up      # Step 5: Start program 
 ```
+
+> Step 6: [Follow Link](http://0.0.0.0:5000/)  
 
 ---
 
