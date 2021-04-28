@@ -4,7 +4,7 @@
 
 ---
 
-Welcome to the project named the Noveller, aka "Modeling a Novel." This project is created to help writers suffering from writers' block by generating prompting paragraphs base on their subject of choice. It is build using OpenAI GPT-2 neural network.  
+Welcome to the project named the Noveller, aka "Modeling a Novel." This project was created to help writers suffering from writer's block by generating prompt text base on their subject of choice. It is built from OpenAI GPT-2 neural network.
 
 <details>
 
@@ -31,6 +31,19 @@ The GPT architecture implements a deep neural network, specifically a transforme
 </details>
 
 </details>
+
+<br>
+Sadly the model is too big/expensive for a hobbyist to host. If you would like to host it locally, follow these steps:
+
+<br>
+
+Step 1: [Download File](https://drive.google.com/file/d/1yWJCV3shUcSCwksQw5ajzB60CULlnJ4V/view?usp=sharing)
+```bash
+tar -tvf noveller.tar.xz .  # Step 2: Extract  
+pip install docker-compose  # Step 3: Install Docker Composer
+cd noveller                 # Step 4: Go to noveller dir
+sudo docker-compose up      # Step 5: Start program 
+```
 
 ---
 
